@@ -8,3 +8,8 @@ class WasRun(TestCase):
 
     def testMethod(self):
         self.wasRunFlag = 1
+
+    def setUp(self):
+        self.wasRunFlag = None
+        self.wasSetUp = 1
+        self.log = "setUp"
