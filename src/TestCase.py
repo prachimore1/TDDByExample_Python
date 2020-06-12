@@ -9,8 +9,8 @@ class TestCase:
         result = TestResult()
         result.testStarted()
         self.setUp()
-        method = getattr(self, self.name)
         try:
+            method = getattr(self, self.name)
             method()
         except IOError:
             result.testFailed()
