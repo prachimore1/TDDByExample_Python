@@ -10,6 +10,9 @@ class WasRun(TestCase):
         self.wasRunFlag = 1
         self.log = self.log + " testMethod"
 
+    def testBrokenMethod(self):
+        raise IOError
+
     def setUp(self):
         self.wasRunFlag = None
         self.log = "setUp"
